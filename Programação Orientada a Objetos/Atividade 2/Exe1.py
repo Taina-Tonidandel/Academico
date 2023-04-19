@@ -4,24 +4,29 @@ de faces deve ser definido na criação do objeto (construtor com parâmetro). D
 um dado com 6, 8 e 12 faces no main(). Cada dado deve ser jogado 3 vezes e o resultado de cada
 jogada deve ser impresso na tela. Não deve ser usado print dentro da classe.
 '''
-
 import random
 
-class dado:
+class Dado:
     def __init__(self,faces):
         self.faces = faces
 
     def rolar(self):
-        return random.randint(1, self.faces)
-    
+        return random.randint(1,self.faces)
 
-d6 = dado(6)
-d8 = dado(8)
-d12 = dado(12)
 
-for i in range(3):
+d6 = Dado(6)
+d8 = Dado(8)
+d12 = Dado(12)
+
+for i in range (3):
     print(d6.rolar())
-    print()
+
+print()
+
+for i in range (3):
     print(d8.rolar())
-    print()
+
+print()
+
+for i in range (3):
     print(d12.rolar())
